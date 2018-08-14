@@ -16,9 +16,11 @@ if ($db_url = getenv('DATABASE_URL')) {
 	$password = $url['pass'];
 }
 
+/*
 echo '<pre>';
 var_dump($host, $port, $database, $username, $password);
 die();
+ */
 
 return [
 
@@ -61,11 +63,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $host,
+            'port' => $port,
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
