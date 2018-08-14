@@ -16,10 +16,6 @@ if ($db_url = getenv('DATABASE_URL')) {
 	$password = $url['pass'];
 }
 
-echo '<pre>';
-var_dump($host, $port, $database, $username, $password);
-die();
-
 return [
 
     /*
